@@ -1,0 +1,34 @@
+{% extends 'schoolnow/base.html' %}
+{% block title %}{{ album }}{% endblock %}
+{% block albums_active %}active{% endblock %}
+
+{% block body %}
+
+
+
+
+
+
+
+<br><br><br><br>
+
+<a href="{% url 'schoolnow:detail' mensagem.id %}">
+                        {% if mensagem.memorando %}
+                            
+                        {% else %}
+                            <h3>No image to display</h3>
+                        {% endif %}
+                    </a>
+                    <h1>{{ mensagem.memorando }} <small></small></h1>
+
+                    
+
+
+
+
+
+
+
+
+
+{% endblock %}

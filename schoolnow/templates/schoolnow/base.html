@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Página inicial || Memorando</title>
+    {% load staticfiles %}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="{%  static 'schoolnow/images/favicon.ico' %}"/>
+
+
+    
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="{% static 'schoolnow/marketing.css' %}">
+
+             <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+  
+
+
+</head>
+<body>
+
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="{% url 'schoolnow:index' %}"><b>SCHOOLNOW</b></a>
+
+        <ul class="pure-menu-list">
+<li class="pure-menu-item pure-menu-selected"><a href="{% url 'schoolnow:index' %}" class="pure-menu-link"><b>Início</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Memórias</a></li>
+            
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+{% block body %}
+{% endblock %}
+</body>
+</html>

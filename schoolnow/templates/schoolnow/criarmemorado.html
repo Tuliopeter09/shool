@@ -1,0 +1,29 @@
+{% extends 'schoolnow/base.html' %}
+{% block title %}Add a New Album{% endblock %}
+{% block forums_active %}active{% endblock %}
+
+{% block body %} 
+
+
+      {% load staticfiles %}
+
+
+
+
+
+
+
+
+
+<form method="post">
+  {% csrf_token %}
+  {{ user_form.as_p }}
+  {{ form.as_p }}
+  <button type="submit">Save changes</button>
+</form>
+
+
+
+
+
+{% endblock %}

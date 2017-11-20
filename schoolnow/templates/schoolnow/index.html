@@ -1,0 +1,154 @@
+{% extends 'schoolnow/base.html' %}
+
+{% block body %}
+
+       {% load staticfiles %}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+
+    <meta name="description" content="A layout example that shows off a responsive product landing page.">
+    <title>Landing Page &ndash; Layout Examples &ndash; Pure</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="{% static 'schoolnow/marketing.css' %}">
+        <!--<![endif]-->
+
+                     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+
+<style>
+
+
+body{
+             font-family: 'Quicksand', sans-serif;
+
+}
+
+.splash-container {
+    background: url({% static 'schoolnow/images/segundob.jpg' %}); 
+    background-size: cover;
+
+
+
+
+}
+
+
+.splash-head{
+    font-size: 25px;
+    border: 1px solid white;
+    color: black;
+    border-radius: 7px;
+    padding: 1em 1.0em;
+    background-color: white;
+
+
+
+
+
+}
+.splash-subhead{
+    color: black;
+}
+
+.splash-subhead-mid{
+    color: white;
+}
+
+.home-menu .pure-menu-heading {
+    color: white;
+    font-weight: 400;
+    font-size: 120%;
+
+
+}
+
+
+.footer{
+    text-align: center;
+    background-color: black;
+    position: relative;
+    top: 215px;
+    height: 80px;
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+<div class="splash-container pure-img-responsive">
+    <div class="splash">
+        <h1 class="splash-head"><b>PROJETO #SCHOOLNOW</b></h1>
+        <p class="splash-subhead">
+            <b class="splash-subhead-mid">Seja bem-vindo participante!</b>
+        </p>
+        <p>
+            <a href="{% url 'schoolnow:login_user' %}" class="pure-button pure-button-primary">Deixar uma mensagem!! :)</a>
+        </p>
+    </div>
+</div>
+
+
+
+<br><br><br>
+<br><br><br>
+
+<br><br><br>
+
+<br><br><br>
+
+
+
+<div class="footer"><br>
+    Projeto SCHOOLNOW. Todos os direitos reservados
+
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

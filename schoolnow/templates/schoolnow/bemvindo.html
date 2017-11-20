@@ -1,0 +1,131 @@
+{% extends 'schoolnow/base_visitor.html' %}
+{% block title %}Bem-vindo!!{% endblock %}
+{% block songs_active %}active{% endblock %}
+
+{% block body %}
+
+
+      {% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <title></title>
+
+
+
+<style>
+
+body{
+	background-color: white;
+}
+.content-wrapper{
+	position: relative;
+	top: 80px;
+	background-color: white;
+}
+
+
+.footer{
+    text-align: center;
+    background-color: black;
+    position: relative;
+    top: 230px;
+    height: 80px;
+}
+
+p{
+	font-family: 'Bangers', cursive;
+	font-size: 60px;
+	line-height: 50px;
+	color: black;
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+<div class="content-wrapper">
+  
+   
+    <div class="content">
+
+        <div class="pure-g">
+            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+                
+
+                <p>Tudo beleza {{ user }}? deixe sua mensagem e fale do impacto do SCHOOLNOW<br> na sua vida!!</p>
+
+     <a href="{% url 'schoolnow:criarmemorando' %}"> <button class="pure-button pure-button-primary">Deixar uma mensagem!</button></a>
+
+
+                    
+            </div>
+
+            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+                
+
+                <img src="{% static 'schoolnow/images/IMG-20161016-WA0014.jpg' %}" class="pure-img-responsive">
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="footer"><br>
+    Projeto SCHOOLNOW. Todos os direitos reservados
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

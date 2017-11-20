@@ -1,0 +1,144 @@
+{% extends 'schoolnow/base.html' %}
+{% block title %}Register{% endblock %}
+{% block register_active %}active{% endblock %}
+{% load staticfiles %}
+{% block body %}
+
+<html>
+
+
+
+ <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+
+   
+ <link rel="stylesheet" href="{% static 'schoolnow/marketing.css' %}">
+     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+<head>
+
+<style>
+
+.pure-form input[type] {
+    border: 2px solid #ddd;
+    box-shadow: none;
+    font-size: 100%;
+    width: 100%;
+    margin-bottom: 1em;
+
+}
+
+
+.content-wrapper{
+    position: relative;
+    top: 30px;
+
+}
+
+.registrar{
+    background: url({% static 'schoolnow/images/register.jpg' %}); 
+    background-size: cover;
+    height: 180px;
+}
+.footer{
+    text-align: center;
+    background-color: black;
+    position: relative;
+    top: 100px;
+    height: 40px;
+}
+</style>
+
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+<div class="content-wrapper">
+  
+   
+    <div class="content">
+
+        <div class="pure-g">
+            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+                
+
+                 <h3>Não tem uma conta? Registre-se por aqui!</h3>
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'schoolnow/form_template.html' %}
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success">Cadastrar</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    
+            </div>
+
+            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+                <h4>Unidos por Educação</h4>
+                <p>
+                    O SCHOOLNOW une-se à escola, potencializa fatores de ensino e tentar entender os principais pontos de motivação escolar no ensino médio com o objetivo de desenvolver artíficos informatizados na busca por uma escola mais digital!
+                </p>
+
+                <h4>Deixe uma mensagem!</h4>
+                <p>
+                    Você, aluno, professor, integrante do SCHOOLNOW, deixe uma mensagem sobre o que fizemos na sua trajetória e espalhe seu carinho com outros diversos participantes! :)
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<div class="registrar pure-img-responsive">
+    
+
+
+</div>
+
+
+
+<div class="footer">
+    Projeto SCHOOLNOW. Todos os direitos reservados
+
+</div>
+
+
+
+    
+
+</body>
+
+
+</html>
+
+{% endblock %}
+

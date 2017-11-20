@@ -1,0 +1,141 @@
+{% extends 'schoolnow/base.html' %}
+{% block title %}Log In{% endblock %}
+{% block login_active %}active{% endblock %}
+{% load staticfiles %}
+{% block body %} 
+
+<html>
+ <meta name="viewport" content="initial-scale=1">
+<head>
+ <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+                <link rel="stylesheet" href="{% static 'schoolnow/pure.css' %}">
+
+               <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+
+
+<style>
+    body{
+    background-color: #C0D5D0;
+
+    min-height: 340px;
+    font-family: 'Quicksand', sans-serif;
+
+
+
+    }
+    .foto{
+    background: url({% static 'schoolnow/images/login.jpg' %}); 
+    background-size: cover;
+    height: 280px;
+
+
+    }
+    .foto p{
+        font-family: 'Gloria Hallelujah', cursive;
+        font-size: 60px;
+
+    }
+    .formulario{
+       position: relative;
+       top: 30px;
+       color: black;
+    }
+    input{
+        width: 200px;
+        
+    }
+
+    p{
+        color: black;
+    }
+
+
+.l-box {
+            padding: 1em;
+        }
+
+
+        .pure-g > div {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .l-box {
+            padding: 1em;
+        }
+
+.submit{
+    position: relative;
+    left: 40px;
+}
+
+.footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    position: relative;
+    top: 100px;
+    height: 80px;
+}
+</style>
+
+</head>
+
+
+<body>
+
+
+<br><br>
+<div class="foto pure-img-responsive">
+
+</div>
+
+{% block content %}
+   
+    {% if error %}
+        {{ error }}
+    {% endif %}
+
+<div class="formulario">
+ <center>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="login" class="submit">
+        <p>Não possui uma conta? Faça seu cadastro por <a href="{% url 'schoolnow:register' %}" style="text-decoration: none;">aqui</a> :)</p>
+    </form>
+</center>
+ 
+
+
+<div class="footer"><br>
+    Projeto SCHOOLNOW. Todos os direitos reservados
+
+</div>
+
+
+
+ </div>
+{% endblock %}
+
+
+
+
+</body>
+
+{% endblock %}
+
